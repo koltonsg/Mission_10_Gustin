@@ -6,6 +6,7 @@ using System.Reflection;
 
 namespace WebApplication1.Data
 {
+    // Bowlers class with each of the fields we need for our table
     public class Bowlers
     {
         [Key]
@@ -23,6 +24,7 @@ namespace WebApplication1.Data
         public Teams Team { get; set; }
 
     }
+    // teams class with each of the fields we need for our table
     public class Teams
     {
         [Key]

@@ -22,7 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(x => x.WithOrigins("http://localhost:3000"));
+app.UseCors(x => x.WithOrigins("http://localhost:3000")); //UseCors allows us to specify the origins that are allowed to access our API
 
 app.UseHttpsRedirection();
 

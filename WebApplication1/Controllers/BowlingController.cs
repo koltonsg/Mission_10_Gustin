@@ -5,6 +5,7 @@ using WebApplication1.Data;
 
 namespace WebApplication1.Controllers
 {
+    // api route for the bowling controller
     [Route("api/[controller]")]
     [ApiController]
     public class BowlingController : ControllerBase
@@ -18,6 +19,7 @@ namespace WebApplication1.Controllers
         [HttpGet(Name = "GetBowler")]
         public IEnumerable<Bowlers> Get()
         {
+            // filtering for just the two teams
             var bowlerList = _bowlerContext.Bowlers
                 .Include(b => b.Team)
                 .Where(b => b.Team.TeamName == "Sharks" || b.Team.TeamName == "Marlins") 
